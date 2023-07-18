@@ -16,3 +16,35 @@
   background-color: maroon;
   color: white;
 }
+
+.home{
+  background-color: maroon;
+  text-align: center;
+  text-size-adjust: 80%;
+}
+
+.card {
+  text-align: center;
+  border: grey solid 1px;
+  padding: 1rem;
+  width: 10rem;
+  height: 15rem;
+  display: inline-grid;
+  margin: 1rem 2rem;
+  box-shadow: 3px 4px maroon;
+}
+
+.book-title{
+  font-size: 14px;
+}
+
+.book-img{
+  justify-self: center;
+  height: 8rem;
+  width: auto;
+}
+
+.book-author{
+  font-size: 10px;
+  text-align: left;
+}
