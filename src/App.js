@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import Home from './Home';
 import NavBar from "./NavBar"
 import BookCard from './BookCard';
+import BookForm from './BookForm';
 import './App.css';
 
 
@@ -21,6 +22,7 @@ function App() {
       {books.map((book) => {
       return <BookCard key={book.id} book={book}/>
       })}
+      <BookForm />
     </div>
   );
 }
