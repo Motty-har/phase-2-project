@@ -6,6 +6,14 @@ import './App.css';
 
 
 function App() {
+  const [books, setBooks] = useState([])
+
+  useEffect(() => {
+    fetch(" http://localhost:3000/books")
+    .then(r => r.json())
+    .then(data => setBooks(data))
+  }, [])
+  
   return (
     <div className="App">
       <NavBar />
