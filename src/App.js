@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import Home from './Home';
 import NavBar from "./NavBar"
-import BookCard from './BookCard';
+import Home from './Home';
+import BookCard from "./BookCard"
 import BookForm from './BookForm';
 import './App.css';
 
@@ -9,13 +9,14 @@ import './App.css';
 function App() {
   const [books, setBooks] = useState([])
   const [bookForm, setBookForm] = useState([])
-
+  console.log(bookForm)
   useEffect(() => {
     fetch(" http://localhost:3000/books")
     .then(r => r.json())
     .then(data => setBooks(data))
   }, [])
 
+  console.log(books)
   return (
     <div className="App">
       <NavBar />

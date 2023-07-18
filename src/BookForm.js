@@ -14,10 +14,13 @@ function BookForm({setBookForm}){
     function handleChange(e){
         setIsRead(e.target.value)
     }
-
+    function handleSubmit(e){
+        e.preventDefault()
+        setBookForm(newObj)
+    }
     return(
         <div>
-            <form class="container">
+            <form class="container" onSubmit={handleSubmit}>
                 <h2>Add a book!</h2>
                 <input placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)}></input>
                 <input placeholder="Image" value={image} onChange={(e) => setImage(e.target.value)}></input>
