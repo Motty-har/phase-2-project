@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Home from './Home';
 import NavBar from "./NavBar"
+import BookCard from './BookCard';
 import './App.css';
 
 
@@ -9,6 +10,7 @@ function App() {
     <div className="App">
       <NavBar />
       <Home />
+      <BookCard />
     </div>
   );
 }
