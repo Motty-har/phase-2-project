@@ -25,7 +25,6 @@ function BookForm({setBooks, books}){
         })
         .then(r => r.json())
         .then(data => setBooks([...books, data]))
-        reset()
     }
     return(
         <div>

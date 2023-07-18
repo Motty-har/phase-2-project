@@ -4,6 +4,7 @@ import Home from './Home';
 import BookCard from "./BookCard"
 import BookForm from './BookForm';
 import './App.css';
+import {Route} from "react-router-dom";
 
 function App() {
   const [books, setBooks] = useState([])
@@ -21,12 +22,18 @@ function App() {
   return (
     <div className="App">
       <NavBar />
+      <Route path="/">
       <Home />
+      </Route>
+      <Route path="books">
       {books.map((book) => {
       return <BookCard key={book.id} book={book} updateDelete={updateDelete}/>
       })}
+      </Route>
+      <Route path="book-form">
       <BookForm setBooks={setBooks} books={books} />
-    </div>
+      </Route>
+      </div>
   );
 }
 
