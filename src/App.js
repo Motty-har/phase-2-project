@@ -22,15 +22,15 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <Route path="/">
+      <Route exact path="/">
       <Home />
       </Route>
-      <Route path="books">
+      <Route path="/books">
       {books.map((book) => {
       return <BookCard key={book.id} book={book} updateDelete={updateDelete}/>
       })}
       </Route>
-      <Route path="book-form">
+      <Route path="/book-form">
       <BookForm setBooks={setBooks} books={books} />
       </Route>
       </div>
