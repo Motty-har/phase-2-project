@@ -18,7 +18,7 @@
 }
 
 .home{
-  background-color: maroon;
+  background-color: white;
   text-align: center;
   text-size-adjust: 80%;
 }
@@ -47,4 +47,15 @@
 .book-author{
   font-size: 10px;
   text-align: left;
+}
+
+.container{
+  text-align: center;
+  border: grey solid 1px;
+  padding: 1rem;
+  width: 20rem;
+  height: 15rem;
+  display: inline-grid;
+  margin: 4rem 2rem;
+  box-shadow: 3px 4px maroon;
 }

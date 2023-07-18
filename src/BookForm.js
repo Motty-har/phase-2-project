@@ -21,15 +21,17 @@ function BookForm({setBooks, books}){
             headers: {
                 "Content-type": "application/json"
               },
-            body: JSON.stringify(setBooks([...books, newObj]))
-
+            body: JSON.stringify(newObj)
         })
+        .then(r => r.json())
+        .then(data => setBooks([...books, data]))
+        reset()
     }
     return(
         <div>
             <form class="container" onSubmit={handleSubmit}>
                 <h2>Add a book!</h2>
-                <input placeholder="Title" value={title} onChange={(e) => setTitle(e.target.value)}></input>
+                <input placeholder="Title" onChange={(e) => setTitle(e.target.value)}></input>
                 <input placeholder="Image" value={image} onChange={(e) => setImage(e.target.value)}></input>
                 <input placeholder="Author" value={author} onChange={(e) => setAuthor(e.target.value)}></input>
                 <label for="isRead">Have you read it?</label>
