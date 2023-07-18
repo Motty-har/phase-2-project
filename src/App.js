@@ -13,12 +13,14 @@ function App() {
     .then(r => r.json())
     .then(data => setBooks(data))
   }, [])
-  
+
   return (
     <div className="App">
       <NavBar />
       <Home />
-      <BookCard />
+      {books.map((book) => {
+      return <BookCard key={book.id} book={book}/>
+      })}
     </div>
   );
 }

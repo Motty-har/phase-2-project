@@ -1,7 +1,9 @@
 import React, {useState} from "react";
 
-function BookCard(){
+function BookCard({book}){
+    const {title, image, author, read} = book
     const [isRead, setIsRead] = useState(read)
+    
     return(
         <div class="card">
             <h1 class="book-title">Title: </h1>
