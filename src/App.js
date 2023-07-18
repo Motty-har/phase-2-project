@@ -8,6 +8,7 @@ import './App.css';
 
 function App() {
   const [books, setBooks] = useState([])
+  const [bookForm, setBookForm] = useState([])
 
   useEffect(() => {
     fetch(" http://localhost:3000/books")
@@ -22,7 +23,7 @@ function App() {
       {books.map((book) => {
       return <BookCard key={book.id} book={book}/>
       })}
-      <BookForm />
+      <BookForm setBookForm={setBookForm}/>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-function BookForm(){
+function BookForm({setBookForm}){
     return(
         <div>
             <form class="container">
