@@ -16,7 +16,14 @@ function BookForm({setBooks, books}){
     }
     function handleSubmit(e){
         e.preventDefault()
-        setBooks([...books, newObj])
+        fetch("http://localhost:3000/books", {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json"
+              },
+            body: JSON.stringify(setBooks([...books, newObj]))
+
+        })
     }
     return(
         <div>

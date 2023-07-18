@@ -14,7 +14,7 @@ function App() {
     .then(r => r.json())
     .then(data => setBooks(data))
   }, [])
-  console.log(books)
+  
   return (
     <div className="App">
       <NavBar />
