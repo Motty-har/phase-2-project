@@ -1,6 +1,17 @@
 import React, {useState} from "react";
 
 function BookForm({setBookForm}){
+    const [title, setTitle] = useState("")
+    const [image, setImage] = useState("")
+    const [author, setAuthor] = useState("")
+    const [isRead, setIsRead] = useState(true)
+    const newObj = {
+        "title": title,
+        "image": image,
+        "author": author,
+        "read": isRead
+    }
+
     return(
         <div>
             <form class="container">
