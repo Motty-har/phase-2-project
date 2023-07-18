@@ -8,14 +8,12 @@ import './App.css';
 
 function App() {
   const [books, setBooks] = useState([])
-  const [bookForm, setBookForm] = useState([])
-  console.log(bookForm)
+  
   useEffect(() => {
     fetch(" http://localhost:3000/books")
     .then(r => r.json())
     .then(data => setBooks(data))
   }, [])
-
   console.log(books)
   return (
     <div className="App">
@@ -24,7 +22,7 @@ function App() {
       {books.map((book) => {
       return <BookCard key={book.id} book={book}/>
       })}
-      <BookForm setBookForm={setBookForm}/>
+      <BookForm setBooks={setBooks} books={books}/>
     </div>
   );
 }

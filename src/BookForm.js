@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-function BookForm({setBookForm}){
+function BookForm({setBooks, books}){
     const [title, setTitle] = useState("")
     const [image, setImage] = useState("")
     const [author, setAuthor] = useState("")
@@ -16,7 +16,7 @@ function BookForm({setBookForm}){
     }
     function handleSubmit(e){
         e.preventDefault()
-        setBookForm(newObj)
+        setBooks([...books, newObj])
     }
     return(
         <div>
