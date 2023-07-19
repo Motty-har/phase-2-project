@@ -11,6 +11,7 @@ function BookForm({setBooks, books}){
         "author": author,
         "read": isRead
     }
+    console.log(newObj)
     function handleChange(e){
         setIsRead(e.target.value)
     }

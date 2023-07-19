@@ -3,29 +3,40 @@ import {NavLink} from "react-router-dom";
 
 function NavBar(){
     const styling = {
-        display: "inline-block",
-        width: "50px",
-        padding: "12px",
-        margin: "0 6px 6px",
-        background: "blue",
-        textDecoration: "none",
-        color: "white",
+        // margin: ".5px .5px",
+        // background: "black",
+        // textDecoration: "none",
+        // color: "white",
+        // fontSize: "17px",
+        // width: "200px",
+        // border: "1px solid maroon",
+        // display: "block",
+        // padding: "8px"
     }
     return(
-      <div>
+      <div className="topnav">
         <NavLink
             to="/"
-            style={styling}>
+            exact style={styling}
+            activeStyle={{
+                background: "maroon",
+              }}>
             Home
         </NavLink>
         <NavLink
             to="/books"
-            style={styling}>
+            exact style={styling}
+            activeStyle={{
+                background: "maroon",
+              }}>
             Books
         </NavLink>
         <NavLink
             to="/book-form"
-            style={styling}>
+            exact style={styling}
+            activeStyle={{
+                background: "maroon",
+              }}>
             Add Book
         </NavLink>
       </div>
