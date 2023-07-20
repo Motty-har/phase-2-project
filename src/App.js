@@ -30,7 +30,7 @@ function App() {
           return <BookCard key={book.id} book={book} updateDelete={updateDelete}/>
           })}
         </Route>
-        <Route path="/book-form">
+        <Route path="/add-book">
           <BookForm setBooks={setBooks} books={books} />
         </Route>
       </div>
