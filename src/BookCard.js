@@ -9,27 +9,27 @@ function BookCard({book, updateDelete}){
       })
       updateDelete(id)
     }
-    // function handleRead(){
-    //   const updateObj = {
-    //     [Object.keys(book)[3]]: setIsRead(!isRead)
-    //   }
-    //   fetch(`http://localhost:3001/books/${id}`, {
-    //     method: "PATCH",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify(updateObj),
-    //   })
-    //     .then((r) => r.json())
-    //     .then(() => console.log("completed"));
-    // }
+    function handleRead(){
+      const updateObj = {
+        [Object.keys(book)[3]]: setIsRead(!isRead)
+      }
+      fetch(`http://localhost:3001/books/${id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updateObj),
+      })
+        .then((r) => r.json())
+        .then(() => console.log("completed"));
+    }
     return(
-        <div class="card">
-            <h1 class="book-title">{title}</h1>
-            <img src={image} class="book-img" alt=""/>
-            <p class="book-author">Author: {author}</p>
-            <button class="read-button" onClick={handleRead}>{isRead === true ? "Read" : "Read Me"}</button>
-            <button class="delete" onClick={handleDelete}>Delete</button>
+        <div className="card">
+            <h1 className="book-title">{title}</h1>
+            <img src={image} className="book-img" alt=""/>
+            <p className="book-author">Author: {author}</p>
+            <button onClick={handleRead}>{isRead === true ? "Read" : "Read Me"}</button>
+            <button className="delete" onClick={handleDelete}>Delete</button>
         </div>
     )
 }

@@ -64,3 +64,7 @@
   margin: 5rem 10rem;
   box-shadow: 3px 4px maroon;
 }
+.delete{
+  background-color: rgb(185, 65, 65);
+  color: #ddd;
+}
