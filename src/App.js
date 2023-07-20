@@ -4,7 +4,7 @@ import Home from './Home';
 import BookCard from "./BookCard"
 import BookForm from './BookForm';
 import './App.css';
-import {Route, Switch} from "react-router-dom";
+import {Route} from "react-router-dom";
 
 function App() {
   const [books, setBooks] = useState([])
